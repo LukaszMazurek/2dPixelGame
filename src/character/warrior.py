@@ -28,7 +28,7 @@ class Warrior(Character):
                 action.set_x(self.__position_x)
                 action.set_y(self.__position_y)
             except Exception as e:
-                print(f"action is none build object: {e}")
+                Settings.logger.debug(f"action is none build object: {e}")
 
     def action(self):
         self.__update()
@@ -56,8 +56,8 @@ class Warrior(Character):
     def set_run_left(self, animation: Animation) -> None:
         self.__actions[State.running_left] = animation
 
-    def add_heart(self, heart: Heart):
+    def add_heart(self, heart: Heart) -> None:
         self.__hearts.append(heart)
 
-    def remove_heart(self):
+    def remove_heart(self) -> None:
         self.__hearts.pop()

@@ -37,7 +37,7 @@ class DeathBringer(Character):
                 action.set_x(self.__position_x)
                 action.set_y(self.__position_y)
             except Exception as e:
-                print(f"action is none build object: {e}")
+                Settings.logger.debug(f"action is none build object: {e}")
 
     def __update_health_bar(self):
         self.__health_bar.set_x(self.__health_bar_position['x'])

@@ -13,9 +13,11 @@ class DeathBringerBuilder(Builder):
         self.death_bringer = DeathBringer(self.health_points)
 
     def build_left_move_animation(self):
+        # TODO implement left move
         pass
 
     def build_attacking_animation(self):
+        # TODO implement attack
         pass
 
     def build_idle_animation(self):
@@ -23,6 +25,7 @@ class DeathBringerBuilder(Builder):
         self.death_bringer.set_idle(animation)
 
     def build_right_move_animation(self):
+        # TODO implement right move
         pass
 
     def prepare_health_bar(self):
