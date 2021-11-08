@@ -3,7 +3,6 @@ from character.death_bringer import DeathBringer
 from components.animation import Animation
 from components.colors import Colors
 from components.rectangle import Rectangle
-from settings import Settings
 
 
 class DeathBringerBuilder(Builder):
@@ -20,7 +19,7 @@ class DeathBringerBuilder(Builder):
         pass
 
     def build_idle_animation(self):
-        animation = Animation(self.screen, "src\\assets\\death_bringer\\idle_150", "Bringer-of-Death_Idle", 8)
+        animation = Animation(self.screen, "src/assets/death_bringer/idle_150", "Bringer-of-Death_Idle", 8)
         self.death_bringer.set_idle(animation)
 
     def build_right_move_animation(self):

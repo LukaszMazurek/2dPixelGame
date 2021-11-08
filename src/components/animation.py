@@ -1,5 +1,6 @@
 import pygame
 
+from pathlib import Path
 from components.component import Component
 
 
@@ -20,7 +21,7 @@ class Animation(Component):
         images = list()
 
         for idx in range(1, self.__frames + 1):
-            path = f"{self.__path}/{self.__name}_{idx}.png"
+            path = Path(f"{self.__path}/{self.__name}_{idx}.png")
             images.append(pygame.image.load(path))
 
         return images
