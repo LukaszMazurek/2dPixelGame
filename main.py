@@ -5,6 +5,11 @@ from src.game import Game
 
 
 def main():
+
+    """initialize logger"""
+    Settings.logger = Settings.set_logger()
+    Settings.logger.debug("start")
+
     pygame.init()
 
     pygame.display.set_caption(Settings.caption)
